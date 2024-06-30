@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bxxv1il5laych"]
 
-[ext_resource type="Script" path="res://src/example/card_example.gd" id="1_qn6ca"]
+[ext_resource type="Script" path="res://src/example/card/card_example.gd" id="1_qn6ca"]
 [ext_resource type="Script" path="res://src/card/card.gd" id="2_gw8x7"]
 [ext_resource type="Script" path="res://resource/example/card_example.gd" id="3_xk1tf"]
 
