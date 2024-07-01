@@ -20,7 +20,7 @@ func draw() -> bool:
 		return false
 
 func play(card_index: int) -> void:
-	if card_index > hand.size():
+	if card_index > hand.size() - 1:
 		return
 	
 	var card: Card = hand.pop_at(card_index)
