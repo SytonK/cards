@@ -20,3 +20,7 @@ func _on_button_2_pressed() -> void:
 
 func _on_button_discard_pressed() -> void:
 	card_manager.discard_to_deck_bottom()
+
+
+func _on_button_in_play_to_discard_pressed() -> void:
+	card_manager.from_play_to_discard(0)

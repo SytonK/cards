@@ -39,3 +39,10 @@ func play(card_index: int) -> void:
 func discard_to_deck_bottom() -> void:
 	deck.append_array(discard)
 	discard = []
+
+func from_play_to_discard(card_index: int) -> void:
+	if card_index > in_play.size() - 1:
+		return
+	
+	var card: Card = in_play.pop_at(card_index)
+	discard.push_back(card)
