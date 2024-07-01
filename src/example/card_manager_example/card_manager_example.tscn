@@ -1,9 +1,30 @@
-[gd_scene load_steps=2 format=3 uid="uid://bo7e3lgyaxer4"]
+[gd_scene load_steps=7 format=3 uid="uid://bo7e3lgyaxer4"]
 
 [ext_resource type="Script" path="res://src/example/card_manager_example/card_manager_example.gd" id="1_4eyaj"]
+[ext_resource type="Script" path="res://src/card manager/card_manager.gd" id="2_5npl0"]
+[ext_resource type="Script" path="res://src/card/card.gd" id="3_qxqgp"]
+[ext_resource type="Resource" uid="uid://vd53q87c2p27" path="res://src/example/card_resource_example/card0.tres" id="4_rrfdh"]
+[ext_resource type="Resource" uid="uid://bu12gtl0s1opm" path="res://src/example/card_resource_example/card1.tres" id="5_tci7u"]
+[ext_resource type="Resource" uid="uid://dpagw66rhd048" path="res://src/example/card_resource_example/card2.tres" id="6_1ohf3"]
 
 [node name="CardManagerExample" type="Node"]
 script = ExtResource("1_4eyaj")
+
+[node name="CardManager" type="Node" parent="." node_paths=PackedStringArray("deck")]
+script = ExtResource("2_5npl0")
+deck = [NodePath("Card0"), NodePath("Card1"), NodePath("Card2")]
+
+[node name="Card0" type="Node" parent="CardManager"]
+script = ExtResource("3_qxqgp")
+card_resource = ExtResource("4_rrfdh")
+
+[node name="Card1" type="Node" parent="CardManager"]
+script = ExtResource("3_qxqgp")
+card_resource = ExtResource("5_tci7u")
+
+[node name="Card2" type="Node" parent="CardManager"]
+script = ExtResource("3_qxqgp")
+card_resource = ExtResource("6_1ohf3")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -21,5 +42,6 @@ offset_right = 479.0
 offset_bottom = 290.0
 text = "Play0"
 
+[connection signal="deck_is_empty" from="CardManager" to="." method="_on_card_manager_deck_is_empty"]
 [connection signal="pressed" from="CanvasLayer/ButtonDraw" to="." method="_on_button_draw_pressed"]
 [connection signal="pressed" from="CanvasLayer/ButtonPlay0" to="." method="_on_button_play_0_pressed"]
