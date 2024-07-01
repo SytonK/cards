@@ -1,4 +1,4 @@
-class_name CardResource
+class_name Card
 extends Resource
 
 

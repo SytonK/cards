@@ -1,5 +1,5 @@
 class_name ExampleCardResource
-extends CardResource
+extends Card
 
 
 @export var text: String

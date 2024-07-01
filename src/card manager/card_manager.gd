@@ -4,7 +4,6 @@ extends Node
 
 signal deck_is_empty
 
-
 @export var deck: Array[Card]
 var hand: Array[Card] = []
 var discard: Array[Card] = []

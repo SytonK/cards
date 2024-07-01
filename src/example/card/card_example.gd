@@ -1,7 +1,7 @@
 extends Node
 
 
-@onready var card: Card = $Card
+@export var card: Card
 
 
 func _input(event: InputEvent) -> void:
