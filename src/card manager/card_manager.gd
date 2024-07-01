@@ -8,7 +8,6 @@ signal deck_is_empty
 @export var deck: Array[Card]
 var hand: Array[Card] = []
 var discard: Array[Card] = []
-var in_play: Array[Card] = []
 
 
 func draw() -> bool:
@@ -19,3 +18,11 @@ func draw() -> bool:
 	else:
 		deck_is_empty.emit()
 		return false
+
+func play(card_index: int) -> void:
+	if card_index > hand.size():
+		return
+	
+	var card: Card = hand.pop_at(card_index)
+	card.play()
+	discard.push_back(card)
