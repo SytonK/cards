@@ -4,8 +4,14 @@ extends Node
 
 signal deck_is_empty
 
+enum TO {
+	DISCARD,
+	IN_PLAY
+}
+
 @export var deck: Array[Card]
 var hand: Array[Card] = []
+var in_play: Array[Card] = []
 var discard: Array[Card] = []
 
 
@@ -23,8 +29,12 @@ func play(card_index: int) -> void:
 		return
 	
 	var card: Card = hand.pop_at(card_index)
-	card.play()
-	discard.push_back(card)
+	var card_to: TO = card.play()
+	match card_to:
+		TO.DISCARD:
+			discard.push_back(card)
+		TO.IN_PLAY:
+			in_play.push_back(card)
 
 func discard_to_deck_bottom() -> void:
 	deck.append_array(discard)

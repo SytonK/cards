@@ -5,3 +5,4 @@
 [resource]
 script = ExtResource("1_2qlig")
 text = "card2"
+to = 1

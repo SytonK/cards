@@ -2,5 +2,8 @@ class_name Card
 extends Resource
 
 
-func play() -> void:
-	pass
+@export var to: CardManager.TO = CardManager.TO.DISCARD
+
+
+func play() -> CardManager.TO:
+	return to
