@@ -36,12 +36,30 @@ offset_bottom = 231.0
 text = "Draw"
 
 [node name="ButtonPlay0" type="Button" parent="CanvasLayer"]
+offset_left = 310.0
+offset_top = 260.0
+offset_right = 360.0
+offset_bottom = 291.0
+text = "Play0"
+
+[node name="ButtonPlay1" type="Button" parent="CanvasLayer"]
 offset_left = 429.0
 offset_top = 259.0
 offset_right = 479.0
 offset_bottom = 290.0
-text = "Play0"
+text = "Play1
+"
+
+[node name="ButtonPlay2" type="Button" parent="CanvasLayer"]
+offset_left = 542.0
+offset_top = 260.0
+offset_right = 592.0
+offset_bottom = 291.0
+text = "Play2
+"
 
 [connection signal="deck_is_empty" from="CardManager" to="." method="_on_card_manager_deck_is_empty"]
 [connection signal="pressed" from="CanvasLayer/ButtonDraw" to="." method="_on_button_draw_pressed"]
 [connection signal="pressed" from="CanvasLayer/ButtonPlay0" to="." method="_on_button_play_0_pressed"]
+[connection signal="pressed" from="CanvasLayer/ButtonPlay1" to="." method="_on_button_play_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/ButtonPlay2" to="." method="_on_button_play_2_pressed"]
