@@ -42,7 +42,7 @@ offset_right = 760.0
 offset_bottom = 362.0
 text = "play2"
 
-[node name="ButtonDiscard" type="Button" parent="."]
+[node name="ButtonDiscardToDeck" type="Button" parent="."]
 offset_left = 473.0
 offset_top = 455.0
 offset_right = 598.0
@@ -56,9 +56,17 @@ offset_right = 624.0
 offset_bottom = 585.0
 text = "in play to discard 0"
 
+[node name="ButtonDiscartAtIndex" type="Button" parent="."]
+offset_left = 713.0
+offset_top = 453.0
+offset_right = 791.0
+offset_bottom = 484.0
+text = "discard 0"
+
 [connection signal="pressed" from="ButtonDraw" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button0" to="." method="_on_button_0_pressed"]
 [connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="ButtonDiscard" to="." method="_on_button_discard_pressed"]
+[connection signal="pressed" from="ButtonDiscardToDeck" to="." method="_on_button_discard_pressed"]
 [connection signal="pressed" from="ButtonInPlayToDiscard" to="." method="_on_button_in_play_to_discard_pressed"]
+[connection signal="pressed" from="ButtonDiscartAtIndex" to="." method="_on_button_discart_at_index_pressed"]

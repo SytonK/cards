@@ -24,3 +24,7 @@ func _on_button_discard_pressed() -> void:
 
 func _on_button_in_play_to_discard_pressed() -> void:
 	card_manager.from_play_to_discard(0)
+
+
+func _on_button_discart_at_index_pressed() -> void:
+	card_manager.discard_at_index(0)
