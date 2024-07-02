@@ -1,7 +1,10 @@
-[gd_resource type="Resource" script_class="ExampleCardResource" load_steps=2 format=3 uid="uid://bu12gtl0s1opm"]
+[gd_resource type="Resource" script_class="ExampleCardResource" load_steps=3 format=3 uid="uid://bu12gtl0s1opm"]
 
 [ext_resource type="Script" path="res://src/example/card_resource_example/card_resource_example.gd" id="1_2yc0f"]
+[ext_resource type="Texture2D" uid="uid://c0akd6c5e2xuf" path="res://icon.svg" id="2_qga3f"]
 
 [resource]
 script = ExtResource("1_2yc0f")
 text = "card1"
+texture = ExtResource("2_qga3f")
+to = 0

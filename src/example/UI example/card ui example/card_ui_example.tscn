@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuwp3p70j1lpo"]
+
+[ext_resource type="PackedScene" uid="uid://cawdotqm8ioso" path="res://src/UI/card UI/card_ui.tscn" id="1_nah8l"]
+[ext_resource type="Resource" uid="uid://vd53q87c2p27" path="res://src/example/card_resource_example/card0.tres" id="2_55hha"]
+
+[node name="CardUIExample" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CardUI" parent="CanvasLayer" instance=ExtResource("1_nah8l")]
+offset_left = 376.0
+offset_top = 150.0
+offset_right = 376.016
+offset_bottom = 150.184
+card = ExtResource("2_55hha")
