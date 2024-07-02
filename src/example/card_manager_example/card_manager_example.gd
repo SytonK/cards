@@ -7,15 +7,15 @@ func _on_button_pressed() -> void:
 
 
 func _on_button_0_pressed() -> void:
-	card_manager.play(0)
+	card_manager.play_at_index(0)
 
 
 func _on_button_1_pressed() -> void:
-	card_manager.play(1)
+	card_manager.play_at_index(1)
 
 
 func _on_button_2_pressed() -> void:
-	card_manager.play(2)
+	card_manager.play_at_index(2)
 
 
 func _on_button_discard_pressed() -> void:

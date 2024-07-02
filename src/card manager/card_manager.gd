@@ -24,7 +24,7 @@ func draw() -> bool:
 		deck_is_empty.emit()
 		return false
 
-func play(card_index: int) -> void:
+func play_at_index(card_index: int) -> void:
 	if card_index > hand.size() - 1:
 		return
 	
